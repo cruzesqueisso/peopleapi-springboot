@@ -1,6 +1,55 @@
 # peopleapi-springboot
 
-This project was developed to trainning about creating an API REST using Java with Spring Boot on Everis bootcamp course "Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring Boot" from "Digital Innovation One" plataform.
+This project was developed to training about creating an API REST using Java with Spring Boot on Everis bootcamp course "Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring Boot" from "Digital Innovation One" plataform.
+
+To see this project working access the URL "https://peopleapi-springboot.herokuapp.com/api/v1/people".
+
+## Actions
+
+### Get all people
+Use HTTP GET request to end point "https://peopleapi-springboot.herokuapp.com/api/v1/people"
+
+### Get a people by ID
+Use HTTP GET request to end point "https://peopleapi-springboot.herokuapp.com/api/v1/people/{id}". Where "{id}" is the people ID you are looking for.
+
+### Create a people
+Use HTTP POST request to end point "https://peopleapi-springboot.herokuapp.com/api/v1/people" with a JSON payload in body request e.g:
+```javascript
+{
+	"firstName": "Vinícius",
+	"lastName": "França",
+	"cpf": "215.039.630-04",
+	"birthDate": "23-03-1998",
+	"phone": [
+		{
+			"type": "MOBILE",
+			"number": "(11)999999999"
+		}
+	]
+}
+```
+
+### Update a people
+Use HTTP POST request to end point "https://peopleapi-springboot.herokuapp.com/api/v1/people/{id}". Where "{id}" is the people ID you are looking for to update, with a JSON payload in body request (dont forget the field "id" on Person e Phone) e.g:
+```javascript
+{
+	"id": 1,
+	"firstName": "Vinícius",
+	"lastName": "França",
+	"cpf": "067.210.980-83",
+	"birthDate": "23-03-1998",
+	"phone": [
+		{
+			"id": 1,
+			"type": "MOBILE",
+			"number": "(11)777777777"
+		}
+	]
+}
+```
+
+### Delete a people by ID
+Use HTTP DELETE request to end point "https://peopleapi-springboot.herokuapp.com/api/v1/people/{id}". Where "{id}" is the people ID you are looking for to delete.
 
 ---
 
